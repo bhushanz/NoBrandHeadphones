@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "NoBrand";
+  src: url("./Fonts/ExtraBlur.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0d0d0d;
+  color: rgb(46, 37, 223);
+  background: #dedfe3; /* fallback for old browsers */
+  font-family: "NoBrand";
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: rgba(228, 228, 228, 0.462745098);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+.navbar .logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "NoBrand";
+  text-transform: uppercase;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.6980392157);
+}
+.navbar .logo span {
+  color: #477bff;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-family: "NoBrand";
+  font-family: 100;
+  text-transform: uppercase;
+}
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6980392157);
+  font-size: 0.6rem;
+  transition: color 0.3s ease;
+}
+.navbar .nav-links li a:hover {
+  color: #477bff;
+}
+.navbar .nav-links li a.btn {
+  border: 1px solid blue;
+  padding: 8px 16px;
+  border-radius: 25px;
+  color: rgba(0, 0, 0, 0.6980392157);
+  transition: 0.3s ease;
+}
+.navbar .nav-links li a.btn:hover {
+  background-color: rgb(0, 63.3043478261, 224);
+}
+.navbar .menu {
+  display: none;
+}
+
+.Head {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.Head .text {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 5.5vw;
+  font-weight: 500;
+  font-family: "NoBrand";
+  background: linear-gradient(90deg, #003fdf, #aaa9a9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Head .text2 {
+  position: absolute;
+  top: 10%;
+  left: 3%;
+  font-family: "NoBrand";
+  font-size: 1.2vw;
+  font-weight: lighter;
+  font-style: italic;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #003fdf, #aaa9a9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Head .text3 {
+  position: absolute;
+  bottom: 15%;
+  right: 8%;
+  font-family: "NoBrand";
+  font-size: 1.2vw;
+  font-weight: lighter;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.Head .container img {
+  height: 90vh;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+  .navbar .logo {
+    font-size: 5vw;
+    letter-spacing: 0.5px;
+  }
+  .navbar .nav-links {
+    display: none;
+  }
+  .navbar .menu {
+    height: 20px;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .navbar .menu .line {
+    width: 100%;
+    height: 2px;
+    background: rgb(40, 32, 192);
+  }
+  .Head {
+    height: 100vh;
+  }
+  .Head .text {
+    font-size: 10vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    line-height: 1.1;
+  }
+  .Head .text2 {
+    font-size: 3vw;
+    top: 5%;
+    left: 5%;
+    text-align: left;
+  }
+  .Head .text3 {
+    font-size: 3vw;
+    bottom: 10%;
+    right: 5%;
+    text-align: right;
+  }
+  .Head .container {
+    height: 100%;
+    width: 100%;
+  }
+  .Head .container img {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media (max-width: 480px) {
+  .navbar {
+    padding: 20px 20px;
+  }
+  .navbar .logo {
+    font-size: 2.6vw;
+  }
+  .navbar .menu {
+    height: 20px;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .navbar .menu .line {
+    width: 100%;
+    height: 2px;
+    background: rgb(40, 32, 192);
+  }
+  .Head .text {
+    font-size: 8vw;
+  }
+  .Head .text2 {
+    top: 20%;
+  }
+  .Head .text3 {
+    bottom: 20%;
+  }
+  .Head .text2, .Head .text3 {
+    font-size: 1.8vw;
+  }
+  .Head .container img {
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

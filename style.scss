@@ -1,0 +1,275 @@
+// 🎧 Variables
+$bg-color: #0d0d0d;
+$nav-bg: #e4e4e476;
+$accent: #477bff;
+$text-light: #000000b2;
+$text-white: rgb(46, 37, 223);
+
+@font-face {
+  font-family: 'NoBrand';
+  src: url('./Fonts/ExtraBlur.ttf');
+ 
+}
+
+// 🎛 Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: $bg-color;
+  color: $text-white;
+ background: #dedfe3;  /* fallback for old browsers */
+  font-family: 'NoBrand';
+
+}
+
+// 🧭 Navbar Styles
+.navbar {
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: $nav-bg;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+
+  .logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+      font-family: 'NoBrand';
+      text-transform: uppercase;
+      font-weight: 100;
+      color: $text-light;
+
+    span {
+      color: $accent;
+    }
+  }
+  
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+      font-family: 'NoBrand';
+      font-family: 100;
+      text-transform: uppercase;
+     
+
+    li {
+      a {
+        text-decoration: none;
+        color: $text-light;
+        font-size: .6rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $accent;
+        }
+
+        &.btn {
+            border: 1px solid blue;
+          padding: 8px 16px;
+          border-radius: 25px;
+          color: $text-light;
+          transition: 0.3s ease;
+
+          &:hover {
+            background-color: darken($accent, 20%);
+          }
+        }
+      }
+    }
+  }
+.menu{
+    display: none;
+}
+}
+
+.Head{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    .text{
+        text-align: center;
+       text-transform: uppercase;
+        font-size: 5.5vw;
+        font-weight: 500;
+      font-family: 'NoBrand';
+     background: linear-gradient(90deg, #003fdf, #aaa9a9);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+       
+       position: absolute;
+    top: 50%;
+    left: 50%;
+     transform: translate(-50% ,-50%);
+    
+    }
+
+    .text2{
+          position: absolute;
+          top: 10%;
+          left: 3%;
+            font-family: 'NoBrand';
+            font-size: 1.2vw;
+            font-weight: lighter;
+           font-style: italic;
+           text-transform: uppercase;
+             background: linear-gradient(90deg, #003fdf, #aaa9a9);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+         
+    }
+     .text3{
+          position: absolute;
+          bottom: 15%;
+          right: 8%;
+            font-family: 'NoBrand';
+            font-size: 1.2vw;
+            font-weight: lighter;
+           font-style: italic;
+           text-transform: uppercase;
+         
+    }
+    .container{
+   
+     img{
+          height: 90vh;
+        
+     }
+    }
+
+}
+
+
+// 📱 Responsive (Mobile view)
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 30px;
+
+    .logo {
+      font-size: 5vw; // scales with screen
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: none; // hide navigation on mobile
+    }
+      .menu{
+     
+    height: 20px ;
+    width: 25px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 2px;
+     .line{
+        width:100%;
+        height: 2px;
+        background:rgb(40, 32, 192) ;
+     }
+  }
+  }
+
+  .Head {
+    height: 100vh;
+    .text {
+      font-size: 10vw; // bigger for mobile view
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 90%;
+      line-height: 1.1;
+    }
+
+    .text2 {
+      font-size: 3vw;
+      top: 5%;
+      left: 5%;
+      text-align: left;
+    }
+
+    .text3 {
+      font-size: 3vw;
+      bottom: 10%;
+      right: 5%;
+      text-align: right;
+    }
+
+    .container {
+        height: 100%;
+        width: 100%;
+      img {
+        height: 100%; 
+           width: 100%;
+     background-position:center;
+         background-size: cover;
+
+
+      }
+    }
+  }
+}
+
+// 📱 Extra small devices (below 480px)
+@media (max-width: 480px) {
+  .navbar {
+    padding: 20px 20px;
+
+    .logo {
+      font-size: 2.6vw;
+    }
+      .menu{
+     
+    height: 20px ;
+    width: 25px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 2px;
+     .line{
+        width:100%;
+        height: 2px;
+        background:rgb(40, 32, 192) ;
+     }
+  }
+  }
+
+  .Head {
+    .text {
+      font-size: 8vw;
+    }
+     .text2{
+        top: 20%;
+     }
+        .text3{
+        bottom: 20%;
+     }
+
+    .text2, .text3 {
+
+      font-size: 1.8vw;
+    }
+
+    .container {
+      img {
+         background-position:center;
+         background-size: cover;
+        height: 100%;
+          width: 100%;
+      }
+    }
+  }
+}
+
